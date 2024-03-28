@@ -7,8 +7,8 @@ rm -rf /tmp/.X0-lock
 Xvnc -geometry $DisplayResolution -AlwaysShared -AcceptCutText -SendCutText -SendPrimary -AcceptSetDesktopSize -SecurityTypes None :0 &
 sleep 3
 
-echo "Starting dwm..."
-dwm &
+echo "Starting window manager..."
+openbox-session &
 echo "Ready."
 
 if [ -z $1 ]
